@@ -1,55 +1,38 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/tqGs7jxy)
-# Práctica 4.8 Página dinámica en JavaScript
-
-El objetivo de esta práctica es aplicar los fundamentos de JavaScript sobre una interfaz web con Bootstrap, trabajando la manipulación del DOM, eventos, validación de formularios e interactividad, introduciendo el uso de localStorage y buenas prácticas de organización y depuración del código.
-
-Esta práctica sirve para encaminar la entrega del segundo proyecto trimestral evaluable del módulo de Desarrollo de Interfaces.
-
-## Parte 1
-
-1. Implementa un **modo oscuro** en tu página que:
-    - Cambie el fondo de la página.
-    - Cambie el texto del botón a “Modo Claro”.
-    - Guarde la preferencia en el `localStorage`.
-2.  Agrega al formulario un botón **limpiar** que borre todos los campos del formulario previamente introducidos. Al limpiarse deberá de mostrar una **notificación emergente** que no sea intrusiva (como el componente *Toast* de Bootstrap) indicando que los campos se han borrado.
-3.  Agrega al menos **tres validaciones adicionales** a campos de tu formulario mediante un script, y que no hayas hecho previamente en *Bootstrap/HTML5*, mostadas de forma no intrusiva. Ejemplo de dichas validaciones:
-    -   Validar que los campos no tengan números ni caracteres especiales.
-    -   Verificar que al menos un checkbox esté seleccionado.
-    -   Verificar un rango de fechas.
-4.  Agrega un script para que al hacer clic en el botón **enviar** formulario, y todo esté verificado correctamente, se muestre otra **notificación emergente** de tipo `toast`, que no sea intrusiva, indicando que el formulario se ha enviado correctamente durante al menos 4 segundos.
-
-
-## Parte 2
-
-1. Crear un array de objetos con los datos de la tabla:
-    - Genera la tabla dinámicamente desde *JS*.
-    - Resaltar el lenguaje seleccionado en el formulario.
-
-2. Al enviar correctamente el **formulario** anterior:
-    - Crear un objeto JavaScript con los datos
-    - Guardarlo en un array
-    - Mostrar el array por consola usando: `console.table(arrayUsuarios); `
-
-3. Coloca un **breakpoint** en una de las partes anteriores y haz una captura del *DevTools* explicando su funcionamiento.
-
-## Parte 3
-
-1. Escoge entre 2-3 de los siguientes apartados, para implementar interactividad a tu interfaz en JavaScript:
-    - Busca el código para agregar un **reloj digital sencillo** en JavaScript en alguna parte de tu página.
-    - Crea un script para que al hacer clic sobre una **imagen del carrusel** se agrande sin cerrar la galería y un botón para cambiar las imágenes del carrusel dinámicamente al clic en este.
-    - Agrega a tu formulario un **selector de color**, en el que al hacer clic, cambie el color de la tabla de datos.
-    - Agrega un campo para poder hacer una **búsqueda dinámica** el contenido mostrado en la tabla.
-
-2. Por último agrega al menos 2 elementos adicionales en JavaScript por tu cuenta, que sean parecidos a los anteriores y que tengan que ver con la temática o funcionalidad de tu web.
-
 ## Valoración y testing
 
-Para la evaluación de la práctica se tendrá en cuenta:
+A continuación se detalla la documentación requerida:
 
-- Inclusión de una **tabla de pruebas** donde se documenten:
-  - Funcionamiento adecuado del modo oscuro y de la persistencia mediante *localStorage*.
-  - Funcionamiento correcto del botón **Limpiar** del formulario.
-  - Uso de una notificación emergente no intrusiva (*Toast* de Bootstrap).
-  - Envío correcto del formulario, solo permitido si todas las validaciones son correctas.
-  
-- **Documentación** de la web en formato *markdown* con capturas de la web y su funcionamiento.
+### Tabla de Pruebas
+
+| Funcionalidad | Descripción de la Prueba | Resultado Esperado | Estado |
+| :--- | :--- | :--- | :---: |
+| **Modo Oscuro** | Clic en botón de tema y recargar página | El fondo cambia, el texto del botón se actualiza y el tema persiste tras recargar (LocalStorage) | ok |
+| **Botón Limpiar** | Rellenar campos y pulsar "Borrar formulario" | Los campos se vacían y aparece un Toast informativo de Bootstrap | ok |
+| **Notificación Toast** | Enviar formulario o borrar campos | Aparecen notificaciones no intrusivas (Toast) en la esquina inferior | ok |
+| **Validaciones** | Intentar enviar con nombre erróneo, sin intereses o fecha fuera de rango | El formulario no se envía y muestra un Toast con los errores específicos | ok |
+| **Envío Correcto** | Cumplir todas las validaciones y pulsar "Suscribirse" | Se muestra un Toast de éxito (4s) y los datos aparecen en la consola (`console.table`) | ok |
+
+### Documentación y Capturas
+
+#### 1. Funcionamiento General
+La web permite una interacción fluida. El modo oscuro se activa desde la barra de navegación y se guarda en el navegador. La tabla de "Ranking Dinámico" se genera automáticamente al cargar la página.
+
+#### 2. Depuración (Breakpoint)
+Se ha colocado un punto de interrupción en el archivo `js/parte1.js`, específicamente en el evento `submit` del formulario.
+> **Explicación**: El breakpoint permite detener la ejecución justo antes de procesar los datos, permitiendo inspeccionar las variables `errors` y `formData` para asegurar que la lógica de validación y recolección de datos funciona como se espera.
+
+**Captura del Breakpoint:**
+![Breakpoint DevTools](./img/breakpoint.png)
+
+#### 3. Interactividad (Parte 3)
+- **Reloj Digital**: Ubicado en el menú superior.
+- **Buscador**: Permite filtrar la tabla en tiempo real.
+- **Selector de Color**: Cambia el color de la cabecera de la tabla.
+- **Zoom Carrusel**: Botón dedicado para ampliar la imagen activa.
+- **Extras**: Barra de scroll superior y saludo horario en el footer.
+
+**Captura de la Web (Modo Oscuro):**
+![Web Modo Oscuro](./img/web_oscuro.png)
+
+**Captura del Toast de Éxito:**
+![Toast Éxito](./img/web_claro.png)

@@ -1,0 +1,219 @@
+/* Fondo general */
+body {
+    background-color: #0d1117;
+    /* Estilo GitHub Dark */
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #e6edf3;
+    /* Texto claro */
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00d2ff !important;
+    /* Azul cian neón */
+}
+
+/* Cards flotantes */
+.card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 210, 255, 0.15) !important;
+    border-color: #00d2ff;
+}
+
+/* Badge dentro de las cards */
+.card .badge {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+/* Imágenes del carrusel */
+.carousel-item img {
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+/* Títulos del carrusel */
+.carousel-caption h5 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    color: #00d2ff;
+}
+
+/* Tabla personalizada */
+.table {
+    --bs-table-bg: transparent;
+    color: #e6edf3;
+}
+
+.table thead {
+    background-color: #161b22;
+    border-top: 4px solid #00d2ff;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0, 210, 255, 0.1);
+}
+
+/* Sidebar list-group */
+.list-group-item.active {
+    background-color: #00d2ff;
+    border-color: #00d2ff;
+    color: #000;
+    font-weight: bold;
+}
+
+.list-group-item-action:hover {
+    background-color: rgba(0, 210, 255, 0.1);
+    color: #00d2ff;
+}
+
+/* Formularios: focus azul neón */
+.form-control:focus,
+.form-select:focus,
+.form-check-input:checked {
+    border-color: #00d2ff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 210, 255, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: #00d2ff;
+    border-color: #00d2ff;
+}
+
+/* Footer */
+footer {
+    background-color: #0d1117;
+    /* mismo fondo que body */
+}
+
+/* Iconos sociales */
+footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #30363d;
+    border-radius: 50%;
+    color: #e6edf3;
+    transition: all 0.3s ease;
+}
+
+/* Hover iconos */
+footer .social-icons a:hover {
+    color: #00d2ff;
+    border-color: #00d2ff;
+    box-shadow: 0 0 12px rgba(0, 210, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Enlaces legales */
+footer a.text-secondary {
+    transition: color 0.2s ease;
+}
+
+footer a.text-secondary:hover {
+    color: #00d2ff !important;
+    text-decoration: underline;
+}
+
+/* Separadores legales */
+footer span.text-secondary {
+    margin: 0 4px;
+}
+
+/* Texto copyright */
+footer p {
+    letter-spacing: 0.5px;
+}
+
+/* ESTILOS PARA TEMA CLARO */
+[data-bs-theme="light"] body {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+[data-bs-theme="light"] .card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    color: #212529;
+}
+
+[data-bs-theme="light"] .card:hover {
+    border-color: #007bff;
+    box-shadow: 0 12px 24px rgba(0, 123, 255, 0.15) !important;
+}
+
+[data-bs-theme="light"] .navbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #dee2e6;
+}
+
+[data-bs-theme="light"] .navbar-brand {
+    color: #007bff !important;
+}
+
+[data-bs-theme="light"] .navbar-nav .nav-link {
+    color: #495057;
+}
+
+[data-bs-theme="light"] .navbar-nav .nav-link.active {
+    color: #007bff;
+}
+
+[data-bs-theme="light"] .list-group-item {
+    background-color: #ffffff;
+    color: #212529;
+    border-color: #dee2e6;
+}
+
+[data-bs-theme="light"] .list-group-item.active {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+[data-bs-theme="light"] .alert {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border-color: #bee5eb;
+}
+
+[data-bs-theme="light"] .badge {
+    color: #ffffff;
+}
+
+[data-bs-theme="light"] .btn-outline-light {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+[data-bs-theme="light"] .btn-outline-light:hover {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+/* Estilos para el botón de tema en la navbar */
+#theme-toggle {
+    border: none;
+    background: none;
+    padding: 0.5rem 1rem;
+    color: inherit;
+}
+
+[data-bs-theme="light"] #theme-toggle {
+    color: #495057;
+}
+
+[data-bs-theme="light"] #theme-toggle:hover {
+    color: #007bff;
+}
